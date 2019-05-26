@@ -40,9 +40,14 @@ class TC_00_qvm_prefs(qubesadmin.tests.QubesTestCase):
             b'0\x00default=False type=str value2'
         with qubesadmin.tests.tools.StdoutBuffer() as stdout:
             self.assertEqual(0, qubesadmin.tools.qvm_prefs.main([
-                'dom0'], app=self.app))
+                'dom0', '--show-all'], app=self.app))
         self.assertEqual(stdout.getvalue(),
             'prop1  D  value1\n'
+            'prop2  -  value2\n')
+        with qubesadmin.tests.tools.StdoutBuffer() as stdout:
+            self.assertEqual(0, qubesadmin.tools.qvm_prefs.main([
+                'dom0'], app=self.app))
+        self.assertEqual(stdout.getvalue(),
             'prop2  -  value2\n')
         self.assertAllCalled()
 
