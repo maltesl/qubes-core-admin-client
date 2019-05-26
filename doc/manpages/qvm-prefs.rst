@@ -19,6 +19,10 @@ Options
 
    List available properties with short descriptions and exit.
 
+.. option:: --show-all
+
+   Show all properties instead of only non-default ones.
+
 .. option:: --verbose, -v
 
    Increase verbosity.
