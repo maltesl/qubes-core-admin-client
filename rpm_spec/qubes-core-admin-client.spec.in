@@ -19,7 +19,7 @@ BuildArch:  noarch
 Source0: %{name}-%{version}.tar.gz
 
 %description
-This package include managemt tools, like qvm-*.
+This package contains management tools, like qvm-*.
 
 %package -n python2-qubesadmin
 Summary:    Python2 module qubesadmin
